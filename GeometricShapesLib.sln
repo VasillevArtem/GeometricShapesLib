@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometricShapesLib", "GeometricShapesLib\GeometricShapesLib.csproj", "{B419B417-5B91-4900-9184-F8ECEFB411F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometricShapesLibTests", "GeometricShapesLibTests\GeometricShapesLibTests.csproj", "{155B886A-79FD-4213-8894-D0B54783CCAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dbrequest", "Dbrequest", "{454E4B19-38A9-4DF6-A415-A7BCE71C0DD3}"
+	ProjectSection(SolutionItems) = preProject
+		MySQL_request.sql = MySQL_request.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B419B417-5B91-4900-9184-F8ECEFB411F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B419B417-5B91-4900-9184-F8ECEFB411F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B419B417-5B91-4900-9184-F8ECEFB411F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B419B417-5B91-4900-9184-F8ECEFB411F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155B886A-79FD-4213-8894-D0B54783CCAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155B886A-79FD-4213-8894-D0B54783CCAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155B886A-79FD-4213-8894-D0B54783CCAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155B886A-79FD-4213-8894-D0B54783CCAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36A535EB-5922-44F5-A9C4-369A90F540C6}
+	EndGlobalSection
+EndGlobal
