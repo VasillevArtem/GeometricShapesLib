@@ -75,31 +75,7 @@ namespace GeometricShapesLibTests
             Assert.Throws<ArgumentOutOfRangeException>(() => { var triangle5 = (new Triangle(side_A, side_B, side_C)).Area; });
         }
 
-        //[Fact]
-        //public void Triangle_IsRight_True()
-        //{
-        //    //Arrange
-        //    var triangle1 = new Triangle(3.0,4.0,5.0);
-
-        //    //Act
-        //    var type1 = triangle1.GetIsRightTriangle;
-            
-        //    //Assert
-        //    Assert.True(type1);
-        //}
-
-        //[Fact]
-        //public void Triangle_IsRight_False()
-        //{
-        //    //Arrange
-        //    var triangle1 = new Triangle(4.0, 5.0, 6.0);
-
-        //    //Act
-        //    var type2 = triangle1.GetIsRightTriangle;
-
-        //    //Assert
-        //    Assert.False(type2);
-        //}
+        
     }
 }
 
