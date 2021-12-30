@@ -22,7 +22,7 @@ namespace GeometricShapesLib
         }
 
         /// <summary>
-        ///  Метод, выполняет проверку входных данных на их соответсвие.
+        ///  Метод, который выполняет проверку входных данных на их соответсвие.
         /// </summary>
         /// <exception cref="ArgumentException"> Радиус круга не может быть отрицательным значением.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Переполнение типа данных double.</exception>
@@ -44,7 +44,7 @@ namespace GeometricShapesLib
         }
 
         /// <summary>
-        ///  Метод, который площадь круга.
+        ///  Метод, который возвращает площадь круга.
         /// </summary>
         /// <returns></returns>
         /// <exception cref="ArgumentOutOfRangeException">Значение площади круга выходит за границу максимального значения типа double.</exception>

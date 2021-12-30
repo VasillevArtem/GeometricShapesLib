@@ -14,7 +14,7 @@ namespace GeometricShapesLib
         public virtual string GetShapeName() => GetType().Name;
 
         /// <summary>
-        /// Свойство, возвращающее площадь фигуры
+        /// Свойство, возвращающее площадь фигуры.
         /// </summary>
         public double Area { get => AreaFigure(); }
 

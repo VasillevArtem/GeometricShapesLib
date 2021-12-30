@@ -67,7 +67,7 @@ namespace GeometricShapesLibTests
         [Theory]
         [InlineData(double.MaxValue, double.MaxValue, double.MaxValue)]
         [InlineData(1.0E+300, 1.0E+300, 1.0E+300)]
-        public void Triangle_WithoutIncorrectData(double side_A, double side_B, double side_C)
+        public void Triangle_WithOutIncorrectData(double side_A, double side_B, double side_C)
         {
             //Arrange         
             //Act           
