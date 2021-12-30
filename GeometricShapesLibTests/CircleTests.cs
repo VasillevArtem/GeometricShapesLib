@@ -11,8 +11,7 @@ namespace GeometricShapesLibTests
         [InlineData(0.001)]
         [InlineData(1.0)]
         [InlineData(100.67)]        
-        [InlineData(999.999E+100)]
-        
+        [InlineData(999.999E+100)]        
         public void Circle1_CreateWithNormalData(double value)
         {
             //Arrange

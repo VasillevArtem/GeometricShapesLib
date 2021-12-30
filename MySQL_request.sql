@@ -1,6 +1,6 @@
 ﻿CREATE TABLE categories
  (category_id SMALLINT UNSIGNED  PRIMARY KEY NOT NULL,
-  category_name VARCHAR(20) NOT NULL UNIQUE
+  category_name VARCHAR(20) NOT NULL AUTO_INCREMENT
  );
 
 CREATE TABLE products
