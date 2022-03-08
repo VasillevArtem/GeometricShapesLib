@@ -18,6 +18,7 @@ namespace GeometricShapesLib
         public Circle(double radius)
         {
             Radius = radius;
+
             ValidInputData();
         }
 
@@ -29,9 +30,13 @@ namespace GeometricShapesLib
         protected override void ValidInputData()
         {
             if (Radius < 0)
+            {
                 throw new ArgumentException("Radius can't be negative");
+            }
             else if (Radius > double.MaxValue)
+            {
                 throw new ArgumentOutOfRangeException($"Incorrect data. Please enter value between 0 - {double.MaxValue}");
+            }
         }
 
         /// <summary>
@@ -50,10 +55,12 @@ namespace GeometricShapesLib
         /// <exception cref="ArgumentOutOfRangeException">Значение площади круга выходит за границу максимального значения типа double.</exception>
         public override double AreaFigure()
         {
-            double result = Math.PI * Radius * Radius;//Math.Pow() - милионные доли не совпадают.
-            if (result > double.MaxValue)
+            double area = Math.PI * Radius * Radius;//Math.Pow() - милионные доли не совпадают.
+            if (area > double.MaxValue)
+            { 
                 throw new ArgumentOutOfRangeException("Result is greater than the maximum allowed value of the double type");
-            return result;
+            }
+            return area;
 
         }
 

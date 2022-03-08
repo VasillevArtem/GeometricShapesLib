@@ -19,7 +19,7 @@ namespace GeometricShapesLib
         public double Area { get => AreaFigure(); }
 
         /// <summary>
-        /// Абстрактный метод, для проверки входных даннх
+        /// Абстрактный метод, для проверки входных данных
         /// </summary>
         protected abstract void ValidInputData();
 

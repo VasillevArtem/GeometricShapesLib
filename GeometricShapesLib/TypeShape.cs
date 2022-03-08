@@ -10,7 +10,7 @@ namespace GeometricShapesLib
          /// <summary>
          /// Статический метод, который определяет вид треугольника: равносторонний, равнобедренный, прямоугольный, разносторонний.
          /// </summary>
-         /// <param name="tri"> Экземпляр треугольника.</param>
+         /// <param name = "tri"> Экземпляр треугольника.</param>
          /// <returns>Возвращает строку, описывающую вид треугольника.</returns>
          public static string GetTypeTriangle(Triangle tri)
          {
@@ -24,8 +24,9 @@ namespace GeometricShapesLib
 
 
             else if (Math.Pow(tri.Side_A, 2) + Math.Pow(tri.Side_B, 2) == Math.Pow(tri.Side_C, 2) ||
-                 Math.Pow(tri.Side_B, 2) + Math.Pow(tri.Side_C, 2) == Math.Pow(tri.Side_A, 2) ||
-                 Math.Pow(tri.Side_C, 2) + Math.Pow(tri.Side_A, 2) == Math.Pow(tri.Side_B, 2))
+                     Math.Pow(tri.Side_B, 2) + Math.Pow(tri.Side_C, 2) == Math.Pow(tri.Side_A, 2) ||
+                     Math.Pow(tri.Side_C, 2) + Math.Pow(tri.Side_A, 2) == Math.Pow(tri.Side_B, 2))
+
                 return "The right triangle";
 
 

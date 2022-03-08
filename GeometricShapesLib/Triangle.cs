@@ -25,6 +25,7 @@ namespace GeometricShapesLib
             Side_A = side_A;
             Side_B = side_B;
             Side_C = side_C;
+
             ValidInputData();
         }
 
@@ -36,10 +37,14 @@ namespace GeometricShapesLib
         protected override void ValidInputData()
         {
             if (Side_A <= 0 || Side_B <= 0 || Side_C <= 0)
+            {
                 throw new ArgumentException("Triangle cannot have a negative or zero side");
+            }
 
             else if (Side_A + Side_B <= Side_C || Side_A + Side_C <= Side_B || Side_B + Side_C <= Side_A)
+            {
                 throw new ArgumentException("It is impossible to build a triangle based on these values");
+            }
 
         }
 
@@ -62,10 +67,12 @@ namespace GeometricShapesLib
         {
 
             double p = 0.5 * (Side_A + Side_B + Side_C);
-            double result = Math.Sqrt(p * (p - Side_A) * (p - Side_B) * (p - Side_C));
-            if (result > double.MaxValue)
+            double area = Math.Sqrt(p * (p - Side_A) * (p - Side_B) * (p - Side_C));
+            if (area > double.MaxValue)
+            {
                 throw new ArgumentOutOfRangeException("Result is greater than the maximum allowed value of the double type");
-            return result;
+            }
+            return area;
 
         }
 
