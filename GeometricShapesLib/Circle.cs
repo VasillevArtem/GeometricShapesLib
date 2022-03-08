@@ -6,7 +6,7 @@ namespace GeometricShapesLib
     /// <summary>
     /// Класс, описывающий круг.
     /// </summary>
-    public class Circle : Shape, IComparable<Circle>, IEnumerable<Circle>
+    public class Circle : Shape, IComparable<Circle>
     {
         /// <summary>
         /// Радиус круга.
@@ -82,15 +82,7 @@ namespace GeometricShapesLib
             }
             return 0;
         }
-
-        public IEnumerator<Circle> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+       
+       
     }
 }

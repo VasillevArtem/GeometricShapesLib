@@ -9,7 +9,7 @@ namespace GeometricShapesLib
 {   /// <summary>
     /// Класс, описывающий прямоугольник.
     /// </summary>
-    internal class Rectangle : Shape, IComparable<Rectangle>, IEnumerable<Rectangle>
+    internal class Rectangle : Shape, IComparable<Rectangle>
     {
         public double Side_A { get; }
         public double Side_B { get; }
@@ -96,14 +96,6 @@ namespace GeometricShapesLib
             return 0;
         }
 
-        public IEnumerator<Rectangle> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

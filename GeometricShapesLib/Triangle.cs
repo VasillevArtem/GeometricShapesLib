@@ -5,7 +5,7 @@ namespace GeometricShapesLib
 {   /// <summary>
     /// Класс описывающий треугольник.
     /// </summary>
-    public class Triangle : Shape, IComparable<Triangle>, IEnumerable<Triangle>
+    public class Triangle : Shape, IComparable<Triangle>
     {
         /// <summary>
         /// Свойства, для хранения значений сторон треугольника.
@@ -95,14 +95,6 @@ namespace GeometricShapesLib
             return 0;
         }
         
-        public IEnumerator<Triangle> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
