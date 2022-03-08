@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace GeometricShapesLib
 {   /// <summary>
     /// Класс, описывающий прямоугольник.
     /// </summary>
-    internal class Rectangle : Shape
+    internal class Rectangle : Shape, IComparable<Rectangle>, IEnumerable<Rectangle>
     {
         public double Side_A { get; }
         public double Side_B { get; }
@@ -77,5 +78,32 @@ namespace GeometricShapesLib
             return $"Rectangle with sides: A = {this.Side_A}, B = {this.Side_B} and area: {this.Area}.";
         }
 
+        /// <summary>
+        /// Реализация интерфейса IComparable.<T>
+        /// </summary>
+        /// <param name="other">Объект для сравнения.</param>
+        /// <returns></returns>
+        public int CompareTo(Rectangle? other)
+        {
+            if( this.Area > other?.Area)
+            {
+                return 1;
+            }
+            else if( this.Area < other?.Area)
+            {
+                return -1;
+            }
+            return 0;
+        }
+
+        public IEnumerator<Rectangle> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

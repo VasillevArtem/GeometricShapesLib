@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
+
 namespace GeometricShapesLib
 {   /// <summary>
     /// Класс описывающий треугольник.
     /// </summary>
-    public class Triangle : Shape
+    public class Triangle : Shape, IComparable<Triangle>, IEnumerable<Triangle>
     {
         /// <summary>
         /// Свойства, для хранения значений сторон треугольника.
@@ -56,7 +58,7 @@ namespace GeometricShapesLib
         {
             return $"Triangle with sides: A = {this.Side_A}, B = {this.Side_B}, C = {this.Side_C} and area: {this.Area}.";
         }
-        
+
 
         /// <summary>
         /// Метод, который возвращает значение площади треугольника.
@@ -75,7 +77,32 @@ namespace GeometricShapesLib
             return area;
 
         }
+        /// <summary>
+        /// Реализация интерфейса IComparable.<T>
+        /// </summary>
+        /// <param name="other">Объект для сравнения.</param>
+        /// <returns></returns>
+        public int CompareTo(Triangle? other)
+        {
+            if (this.Area > other?.Area)
+            {
+                return 1;
+            }
+            else if (this.Area < other?.Area)
+            {
+                return -1;
+            }
+            return 0;
+        }
+        
+        public IEnumerator<Triangle> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
 
-
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
