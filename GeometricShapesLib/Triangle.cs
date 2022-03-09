@@ -5,7 +5,7 @@ namespace GeometricShapesLib
 {   /// <summary>
     /// Класс описывающий треугольник.
     /// </summary>
-    public class Triangle : Shape, IComparable<Triangle>
+    public class Triangle : Shape, IComparable<Triangle>, ICloneable
     {
         /// <summary>
         /// Свойства, для хранения значений сторон треугольника.
@@ -94,7 +94,13 @@ namespace GeometricShapesLib
             }
             return 0;
         }
-        
-      
+        /// <summary>
+        /// Реализация интерфейса ICloneable.
+        /// </summary>
+        /// <returns>Новый экземпляр треугольника с текущими значениями сторон.</returns>
+        public object Clone()
+        {
+            return new Triangle(this.Side_A, this.Side_B, this.Side_C);
+        }
     }
 }

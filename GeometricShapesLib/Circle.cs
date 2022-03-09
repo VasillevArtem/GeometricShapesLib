@@ -6,7 +6,7 @@ namespace GeometricShapesLib
     /// <summary>
     /// Класс, описывающий круг.
     /// </summary>
-    public class Circle : Shape, IComparable<Circle>
+    public class Circle : Shape, IComparable<Circle>, ICloneable
     {
         /// <summary>
         /// Радиус круга.
@@ -82,7 +82,13 @@ namespace GeometricShapesLib
             }
             return 0;
         }
-       
-       
+        /// <summary>
+        /// Реализация интерфейса ICloneable.
+        /// </summary>
+        /// <returns>Новый экземпляр круга с текущим значениям радиуса.</returns>
+        public object Clone()
+        {
+            return new Circle(this.Radius);
+        }
     }
 }

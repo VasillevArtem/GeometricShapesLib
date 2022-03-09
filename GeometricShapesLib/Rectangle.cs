@@ -9,7 +9,7 @@ namespace GeometricShapesLib
 {   /// <summary>
     /// Класс, описывающий прямоугольник.
     /// </summary>
-    internal class Rectangle : Shape, IComparable<Rectangle>
+    internal class Rectangle : Shape, IComparable<Rectangle>, ICloneable
     {
         public double Side_A { get; }
         public double Side_B { get; }
@@ -95,7 +95,13 @@ namespace GeometricShapesLib
             }
             return 0;
         }
-
-       
+        /// <summary>
+        /// Реализация интерфейса ICloneable.
+        /// </summary>
+        /// <returns>Новый экземпляр прямоугольника с текущими значениями сторон.</returns>
+        public object Clone()
+        {
+           return new Rectangle(this.Side_A, this.Side_B);
+        }
     }
 }
