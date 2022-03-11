@@ -9,7 +9,7 @@ namespace GeometricShapesLib
 {   /// <summary>
     /// Класс, описывающий прямоугольник.
     /// </summary>
-    internal class Rectangle : Shape, IComparable<Rectangle>, ICloneable
+    internal class Rectangle : Shape
     {
         public double Side_A { get; }
         public double Side_B { get; }
@@ -83,7 +83,7 @@ namespace GeometricShapesLib
         /// </summary>
         /// <param name="other">Объект для сравнения.</param>
         /// <returns></returns>
-        public int CompareTo(Rectangle? other)
+        public override int CompareTo(Shape? other)
         {
             if( this.Area > other?.Area)
             {
@@ -99,7 +99,7 @@ namespace GeometricShapesLib
         /// Реализация интерфейса ICloneable.
         /// </summary>
         /// <returns>Новый экземпляр прямоугольника с текущими значениями сторон.</returns>
-        public object Clone()
+        public override object Clone()
         {
            return new Rectangle(this.Side_A, this.Side_B);
         }

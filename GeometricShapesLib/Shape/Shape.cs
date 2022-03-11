@@ -5,7 +5,7 @@ namespace GeometricShapesLib
     /// Абстрактный класс для геометрических фигур, обеспечивающий базовое поведение. 
     /// </summary>
     
-    public abstract class Shape
+    public abstract class Shape : IComparable<Shape>, ICloneable
     {
         /// <summary>
         /// Виртуальный метод, возвращающий название типа фигуры.
@@ -28,6 +28,20 @@ namespace GeometricShapesLib
         /// </summary>
         /// <returns> Площадь фигуры </returns>
         public abstract double AreaFigure();
-        
+
+        /// <summary>
+        /// Абстрактный метод для реализации интерфейса IComparable<Shape>.
+        /// </summary>
+        /// <param name="other">Объект текущей фигуры.</param>
+        /// <returns>return 0  если объекты равны.
+        ///          return 1  если текущий объект больше чем обьект переданный в качестве параметра.
+        ///          return -1 если текущий объктт меньше чем объект переданный в качестве параметра.</returns>
+        public abstract int CompareTo(Shape? other);
+
+        /// <summary>
+        /// Абстрактный метод для реализации интерфейса ICloneable.
+        /// </summary>
+        /// <returns>Новый объект данной фигуры с текущими параметрами.</returns>
+        public abstract object Clone();
     }
 }

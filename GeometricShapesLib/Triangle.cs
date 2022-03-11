@@ -5,7 +5,7 @@ namespace GeometricShapesLib
 {   /// <summary>
     /// Класс описывающий треугольник.
     /// </summary>
-    public class Triangle : Shape, IComparable<Triangle>, ICloneable
+    public class Triangle : Shape
     {
         /// <summary>
         /// Свойства, для хранения значений сторон треугольника.
@@ -82,7 +82,7 @@ namespace GeometricShapesLib
         /// </summary>
         /// <param name="other">Объект для сравнения.</param>
         /// <returns></returns>
-        public int CompareTo(Triangle? other)
+        public override int CompareTo(Shape? other)
         {
             if (this.Area > other?.Area)
             {
@@ -98,7 +98,7 @@ namespace GeometricShapesLib
         /// Реализация интерфейса ICloneable.
         /// </summary>
         /// <returns>Новый экземпляр треугольника с текущими значениями сторон.</returns>
-        public object Clone()
+        public override object Clone()
         {
             return new Triangle(this.Side_A, this.Side_B, this.Side_C);
         }
