@@ -9,7 +9,7 @@ namespace GeometricShapesLib
 {   /// <summary>
     /// Класс, описывающий прямоугольник.
     /// </summary>
-    internal class Rectangle : Shape
+    public class Rectangle : Shape
     {
         public double Side_A { get; }
         public double Side_B { get; }

@@ -35,7 +35,7 @@ namespace GeometricShapesLib
         /// <param name="other">Объект текущей фигуры.</param>
         /// <returns>return 0  если объекты равны.
         ///          return 1  если текущий объект больше чем обьект переданный в качестве параметра.
-        ///          return -1 если текущий объктт меньше чем объект переданный в качестве параметра.</returns>
+        ///          return -1 если текущий объект меньше чем объект переданный в качестве параметра.</returns>
         public abstract int CompareTo(Shape? other);
 
         /// <summary>
