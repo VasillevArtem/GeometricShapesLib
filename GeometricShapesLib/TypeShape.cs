@@ -31,15 +31,7 @@
             return "The versatile triangle";
          }
 
-        public static string GetTypeRectangle(Rectangle rectangle)
-        {
-
-        }
-
-        public static string GetTypeCircle(Circle circle)
-        {
-
-        }
+     
 
         
     }
